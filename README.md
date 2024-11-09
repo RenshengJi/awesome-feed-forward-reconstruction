@@ -2,7 +2,7 @@
 
 A curated list of papers and open-source resources focused on reconstruction based on large feed-forward model. 
 
-### 1. [NIPS '24] SCube: Instant Large-Scale Scene Reconstruction using VoxSplats
+### 1. [NIPS '2024] SCube: Instant Large-Scale Scene Reconstruction using VoxSplats
 **Authors**: Xuanchi Ren, Yifan Lu, Hanxue Liang, Zhangjie Wu, Huan Ling, Mike Chen, Sanja Fidler, Francis Williams, Jiahui Huang
 <details span>
 <summary><b>Abstract</b></summary>
@@ -12,7 +12,7 @@ A curated list of papers and open-source resources focused on reconstruction bas
   [📄 Paper](https://arxiv.org/pdf/2410.20030) | [💻 Code](https://github.com/nv-tlabs/SCube) | [🌐 Project Page](https://research.nvidia.com/labs/toronto-ai/scube/)  
 
 
-### 2. [NIPS '24] Large Spatial Model: End-to-end Unposed Images to Semantic 3D
+### 2. [NIPS '2024] Large Spatial Model: End-to-end Unposed Images to Semantic 3D
 **Authors**: Zhiwen Fan, Jian Zhang, Wenyan Cong, Peihao Wang, Renjie Li, Kairun Wen, Shijie Zhou, Achuta Kadambi, Zhangyang Wang, Danfei Xu, Boris Ivanovic, Marco Pavone, Yue Wang
 <details span>
 <summary><b>Abstract</b></summary>
@@ -51,4 +51,32 @@ In this work, we present the Large Spatial Model (LSM), which processes unposed 
 
   [📄 Paper](https://arxiv.org/pdf/2410.03825) | [💻 Code](https://github.com/Junyi42/monst3r) | [🌐 Project Page](https://monst3r-project.github.io/)  
 
+
+### 6. [CVPR '2024 Oral, Best Paper Runner-Up] pixelSplat: 3D Gaussian Splats from Image Pairs for Scalable Generalizable 3D Reconstruction
+**Authors**: David Charatan, Sizhe Li, Andrea Tagliasacchi, Vincent Sitzmann
+<details span>
+<summary><b>Abstract</b></summary>
+  We introduce pixelSplat, a feed-forward model that learns to reconstruct 3D radiance fields parameterized by 3D Gaussian primitives from pairs of images. Our model features real-time and memory-efficient rendering for scalable training as well as fast 3D reconstruction at inference time. To overcome local minima inherent to sparse and locally supported representations, we predict a dense probability distribution over 3D and sample Gaussian means from that probability distribution. We make this sampling operation differentiable via a reparameterization trick, allowing us to back-propagate gradients through the Gaussian splatting representation. We benchmark our method on wide-baseline novel view synthesis on the real-world RealEstate10k and ACID datasets, where we outperform state-of-the-art light field transformers and accelerate rendering by 2.5 orders of magnitude while reconstructing an interpretable and editable 3D radiance field.
+</details>
+
+  [📄 Paper](https://arxiv.org/pdf/2312.12337) | [💻 Code](https://github.com/dcharatan/pixelsplat) | [🌐 Project Page](dcharatan.github.io/pixelsplat)  
+
+### 7. [ECCV '2024 Oral] MVSplat: Efficient 3D Gaussian Splatting from Sparse Multi-View Images
+**Authors**: Yuedong Chen, Haofei Xu, Chuanxia Zheng, Bohan Zhuang, Marc Pollefeys, Andreas Geiger, Tat-Jen Cham, Jianfei Cai
+<details span>
+<summary><b>Abstract</b></summary>
+  We introduce MVSplat, an efficient model that, given sparse multi-view images as input, predicts clean feed-forward 3D Gaussians. To accurately localize the Gaussian centers, we build a cost volume representation via plane sweeping, where the cross-view feature similarities stored in the cost volume can provide valuable geometry cues to the estimation of depth. We also learn other Gaussian primitives' parameters jointly with the Gaussian centers while only relying on photometric supervision. We demonstrate the importance of the cost volume representation in learning feed-forward Gaussians via extensive experimental evaluations. On the large-scale RealEstate10K and ACID benchmarks, MVSplat achieves state-of-the-art performance with the fastest feed-forward inference speed (22~fps). More impressively, compared to the latest state-of-the-art method pixelSplat, MVSplat uses 10× fewer parameters and infers more than 2× faster while providing higher appearance and geometry quality as well as better cross-dataset generalization.
+</details>
+
+  [📄 Paper](https://arxiv.org/pdf/2403.14627) | [💻 Code](https://github.com/donydchen/mvsplat) | [🌐 Project Page](https://donydchen.github.io/mvsplat/)  
+
+
+### 8. [Arxiv '2024] DepthSplat: Connecting Gaussian Splatting and Depth
+**Authors**: Haofei Xu, Songyou Peng, Fangjinhua Wang, Hermann Blum, Daniel Barath, Andreas Geiger, Marc Pollefeys
+<details span>
+<summary><b>Abstract</b></summary>
+  Gaussian splatting and single/multi-view depth estimation are typically studied in isolation. In this paper, we present DepthSplat to connect Gaussian splatting and depth estimation and study their interactions. More specifically, we first contribute a robust multi-view depth model by leveraging pre-trained monocular depth features, leading to high-quality feed-forward 3D Gaussian splatting reconstructions. We also show that Gaussian splatting can serve as an unsupervised pre-training objective for learning powerful depth models from large-scale unlabelled datasets. We validate the synergy between Gaussian splatting and depth estimation through extensive ablation and cross-task transfer experiments. Our DepthSplat achieves state-of-the-art performance on ScanNet, RealEstate10K and DL3DV datasets in terms of both depth estimation and novel view synthesis, demonstrating the mutual benefits of connecting both tasks.
+</details>
+
+  [📄 Paper](https://arxiv.org/pdf/2410.13862) | [💻 Code](https://github.com/cvg/depthsplat) | [🌐 Project Page](https://haofeixu.github.io/depthsplat/)  
 

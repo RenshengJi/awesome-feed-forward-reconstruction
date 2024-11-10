@@ -90,3 +90,23 @@ In this work, we present the Large Spatial Model (LSM), which processes unposed 
 
   [📄 Paper](https://arxiv.org/pdf/2012.02190) | [💻 Code](https://github.com/sxyu/pixel-nerf) | [🌐 Project Page](https://alexyu.net/pixelnerf/)  
 
+
+### 10. [ICLR '2023] Is Attention All That NeRF Needs?
+**Authors**: Mukund Varma T, Peihao Wang, Xuxi Chen, Tianlong Chen, Subhashini Venugopalan, Zhangyang Wang
+<details span>
+<summary><b>Abstract</b></summary>
+  We present Generalizable NeRF Transformer (GNT), a transformer-based architecture that reconstructs Neural Radiance Fields (NeRFs) and learns to renders novel views on the fly from source views. While prior works on NeRFs optimize a scene representation by inverting a handcrafted rendering equation, GNT achieves neural representation and rendering that generalizes across scenes using transformers at two stages. (1) The view transformer leverages multi-view geometry as an inductive bias for attention-based scene representation, and predicts coordinate-aligned features by aggregating information from epipolar lines on the neighboring views. (2) The ray transformer renders novel views using attention to decode the features from the view transformer along the sampled points during ray marching. Our experiments demonstrate that when optimized on a single scene, GNT can successfully reconstruct NeRF without an explicit rendering formula due to the learned ray renderer. When trained on multiple scenes, GNT consistently achieves state-of-the-art performance when transferring to unseen scenes and outperform all other methods by ~10% on average. Our analysis of the learned attention maps to infer depth and occlusion indicate that attention enables learning a physically-grounded rendering. Our results show the promise of transformers as a universal modeling tool for graphics.
+</details>
+
+  [📄 Paper](https://arxiv.org/pdf/2207.13298) | [💻 Code](https://github.com/VITA-Group/GNT) | [🌐 Project Page](https://vita-group.github.io/GNT/)  
+
+
+### 11. [CVPR '2021] IBRNet: Learning Multi-View Image-Based Rendering
+**Authors**: Qianqian Wang, Zhicheng Wang, Kyle Genova, Pratul Srinivasan, Howard Zhou, Jonathan T. Barron, Ricardo Martin-Brualla, Noah Snavely, Thomas Funkhouser
+<details span>
+<summary><b>Abstract</b></summary>
+  We present a method that synthesizes novel views of complex scenes by interpolating a sparse set of nearby views. The core of our method is a network architecture that includes a multilayer perceptron and a ray transformer that estimates radiance and volume density at continuous 5D locations (3D spatial locations and 2D viewing directions), drawing appearance information on the fly from multiple source views. By drawing on source views at render time, our method hearkens back to classic work on image-based rendering (IBR), and allows us to render high-resolution imagery. Unlike neural scene representation work that optimizes per-scene functions for rendering, we learn a generic view interpolation function that generalizes to novel scenes. We render images using classic volume rendering, which is fully differentiable and allows us to train using only multi-view posed images as supervision. Experiments show that our method outperforms recent novel view synthesis methods that also seek to generalize to novel scenes. Further, if fine-tuned on each scene, our method is competitive with state-of-the-art single-scene neural rendering methods.
+</details>
+
+  [📄 Paper](https://arxiv.org/pdf/2102.13090) | [💻 Code](https://github.com/googleinterns/IBRNet) | [🌐 Project Page](https://ibrnet.github.io/)  
+

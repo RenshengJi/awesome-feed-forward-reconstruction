@@ -59,7 +59,7 @@ In this work, we present the Large Spatial Model (LSM), which processes unposed 
   We introduce pixelSplat, a feed-forward model that learns to reconstruct 3D radiance fields parameterized by 3D Gaussian primitives from pairs of images. Our model features real-time and memory-efficient rendering for scalable training as well as fast 3D reconstruction at inference time. To overcome local minima inherent to sparse and locally supported representations, we predict a dense probability distribution over 3D and sample Gaussian means from that probability distribution. We make this sampling operation differentiable via a reparameterization trick, allowing us to back-propagate gradients through the Gaussian splatting representation. We benchmark our method on wide-baseline novel view synthesis on the real-world RealEstate10k and ACID datasets, where we outperform state-of-the-art light field transformers and accelerate rendering by 2.5 orders of magnitude while reconstructing an interpretable and editable 3D radiance field.
 </details>
 
-  [📄 Paper](https://arxiv.org/pdf/2312.12337) | [💻 Code](https://github.com/dcharatan/pixelsplat) | [🌐 Project Page](dcharatan.github.io/pixelsplat)  
+  [📄 Paper](https://arxiv.org/pdf/2312.12337) | [💻 Code](https://github.com/dcharatan/pixelsplat) | [🌐 Project Page](https://davidcharatan.com/pixelsplat/)  
 
 ### 7. [ECCV '2024 Oral] MVSplat: Efficient 3D Gaussian Splatting from Sparse Multi-View Images
 **Authors**: Yuedong Chen, Haofei Xu, Chuanxia Zheng, Bohan Zhuang, Marc Pollefeys, Andreas Geiger, Tat-Jen Cham, Jianfei Cai

@@ -110,3 +110,23 @@ In this work, we present the Large Spatial Model (LSM), which processes unposed 
 
   [📄 Paper](https://arxiv.org/pdf/2102.13090) | [💻 Code](https://github.com/googleinterns/IBRNet) | [🌐 Project Page](https://ibrnet.github.io/)  
 
+
+### 12. [ECCV '2024 Oral] LGM: Large Multi-View Gaussian Model for High-Resolution 3D Content Creation
+**Authors**: Jiaxiang Tang, Zhaoxi Chen, Xiaokang Chen, Tengfei Wang, Gang Zeng, Ziwei Liu
+<details span>
+<summary><b>Abstract</b></summary>
+  3D content creation has achieved significant progress in terms of both quality and speed. Although current feed-forward models can produce 3D objects in seconds, their resolution is constrained by the intensive computation required during training. In this paper, we introduce Large Multi-View Gaussian Model (LGM), a novel framework designed to generate high-resolution 3D models from text prompts or single-view images. Our key insights are two-fold: 1) 3D Representation: We propose multi-view Gaussian features as an efficient yet powerful representation, which can then be fused together for differentiable rendering. 2) 3D Backbone: We present an asymmetric U-Net as a high-throughput backbone operating on multi-view images, which can be produced from text or single-view image input by leveraging multi-view diffusion models. Extensive experiments demonstrate the high fidelity and efficiency of our approach. Notably, we maintain the fast speed to generate 3D objects within 5 seconds while boosting the training resolution to 512, thereby achieving high-resolution 3D content generation.
+</details>
+
+  [📄 Paper](https://arxiv.org/pdf/2402.05054) | [💻 Code](https://github.com/3DTopia/LGM) | [🌐 Project Page](https://me.kiui.moe/lgm/)  
+
+
+
+### 13. [Arxiv '2024] GS-LRM: Large Reconstruction Model for 3D Gaussian Splatting
+**Authors**: Kai Zhang, Sai Bi, Hao Tan, Yuanbo Xiangli, Nanxuan Zhao, Kalyan Sunkavalli, Zexiang Xu
+<details span>
+<summary><b>Abstract</b></summary>
+  We propose GS-LRM, a scalable large reconstruction model that can predict high-quality 3D Gaussian primitives from 2-4 posed sparse images in 0.23 seconds on single A100 GPU. Our model features a very simple transformer-based architecture; we patchify input posed images, pass the concatenated multi-view image tokens through a sequence of transformer blocks, and decode final per-pixel Gaussian parameters directly from these tokens for differentiable rendering. In contrast to previous LRMs that can only reconstruct objects, by predicting per-pixel Gaussians, GS-LRM naturally handles scenes with large variations in scale and complexity. We show that our model can work on both object and scene captures by training it on Objaverse and RealEstate10K respectively. In both scenarios, the models outperform state-of-the-art baselines by a wide margin. We also demonstrate applications of our model in downstream 3D generation tasks.
+</details>
+
+  [📄 Paper](https://arxiv.org/pdf/2404.19702) | 💻 Code | [🌐 Project Page](https://sai-bi.github.io/project/gs-lrm/#BibTeX)  

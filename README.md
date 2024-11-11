@@ -160,3 +160,23 @@ In this work, we present the Large Spatial Model (LSM), which processes unposed 
 </details>
 
   [📄 Paper](https://arxiv.org/pdf/2311.06214) | 💻 Code | [🌐 Project Page](https://jiahao.ai/instant3d/) 
+
+
+### 17. [Arxiv '2024] Gamba: Marry Gaussian Splatting with Mamba for single view 3D reconstruction
+**Authors**: Qiuhong Shen, Zike Wu, Xuanyu Yi, Pan Zhou, Hanwang Zhang, Shuicheng Yan, Xinchao Wang
+<details span>
+<summary><b>Abstract</b></summary>
+  We tackle the challenge of efficiently reconstructing a 3D asset from a single image at millisecond speed. Existing methods for single-image 3D reconstruction are primarily based on Score Distillation Sampling (SDS) with Neural 3D representations. Despite promising results, these approaches encounter practical limitations due to lengthy optimizations and significant memory consumption. In this work, we introduce Gamba, an end-to-end 3D reconstruction model from a single-view image, emphasizing two main insights: (1) Efficient Backbone Design: introducing a Mamba-based GambaFormer network to model 3D Gaussian Splatting (3DGS) reconstruction as sequential prediction with linear scalability of token length, thereby accommodating a substantial number of Gaussians; (2) Robust Gaussian Constraints: deriving radial mask constraints from multi-view masks to eliminate the need for warmup supervision of 3D point clouds in training. We trained Gamba on Objaverse and assessed it against existing optimization-based and feed-forward 3D reconstruction approaches on the GSO Dataset, among which Gamba is the only end-to-end trained single-view reconstruction model with 3DGS. Experimental results demonstrate its competitive generation capabilities both qualitatively and quantitatively and highlight its remarkable speed: Gamba completes reconstruction within 0.05 seconds on a single NVIDIA A100 GPU, which is about 1,000× faster than optimization-based methods.
+</details>
+
+  [📄 Paper](https://arxiv.org/pdf/2403.18795) | [💻 Code](https://github.com/SkyworkAI/Gamba) | [🌐 Project Page](https://florinshen.github.io/gamba-project/) 
+
+
+### 18. [Arxiv '2024] MVGamba: Unify 3D Content Generation as State Space Sequence Modeling
+**Authors**: Xuanyu Yi, Zike Wu, Qiuhong Shen, Qingshan Xu, Pan Zhou, Joo-Hwee Lim, Shuicheng Yan, Xinchao Wang, Hanwang Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+  Recent 3D large reconstruction models (LRMs) can generate high-quality 3D content in sub-seconds by integrating multi-view diffusion models with scalable multi-view reconstructors. Current works further leverage 3D Gaussian Splatting as 3D representation for improved visual quality and rendering efficiency. However, we observe that existing Gaussian reconstruction models often suffer from multi-view inconsistency and blurred textures. We attribute this to the compromise of multi-view information propagation in favor of adopting powerful yet computationally intensive architectures (e.g., Transformers). To address this issue, we introduce MVGamba, a general and lightweight Gaussian reconstruction model featuring a multi-view Gaussian reconstructor based on the RNN-like State Space Model (SSM). Our Gaussian reconstructor propagates causal context containing multi-view information for cross-view self-refinement while generating a long sequence of Gaussians for fine-detail modeling with linear complexity. With off-the-shelf multi-view diffusion models integrated, MVGamba unifies 3D generation tasks from a single image, sparse images, or text prompts. Extensive experiments demonstrate that MVGamba outperforms state-of-the-art baselines in all 3D content generation scenarios with approximately only 0.1× of the model size.
+</details>
+
+  [📄 Paper](https://arxiv.org/pdf/2406.06367) | 💻 Code | 🌐 Project Page

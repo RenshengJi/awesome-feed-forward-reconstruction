@@ -130,3 +130,23 @@ In this work, we present the Large Spatial Model (LSM), which processes unposed 
 </details>
 
   [📄 Paper](https://arxiv.org/pdf/2404.19702) | 💻 Code | [🌐 Project Page](https://sai-bi.github.io/project/gs-lrm/#BibTeX)  
+
+
+### 14. [Arxiv '2024] LRM: Large Reconstruction Model for Single Image to 3D
+**Authors**: Yicong Hong, Kai Zhang, Jiuxiang Gu, Sai Bi, Yang Zhou, Difan Liu, Feng Liu, Kalyan Sunkavalli, Trung Bui, Hao Tan
+<details span>
+<summary><b>Abstract</b></summary>
+  We propose the first Large Reconstruction Model (LRM) that predicts the 3D model of an object from a single input image within just 5 seconds. In contrast to many previous methods that are trained on small-scale datasets such as ShapeNet in a category-specific fashion, LRM adopts a highly scalable transformer-based architecture with 500 million learnable parameters to directly predict a neural radiance field (NeRF) from the input image. We train our model in an end-to-end manner on massive multi-view data containing around 1 million objects, including both synthetic renderings from Objaverse and real captures from MVImgNet. This combination of a high-capacity model and large-scale training data empowers our model to be highly generalizable and produce high-quality 3D reconstructions from various testing inputs, including real-world in-the-wild captures and images created by generative models.
+</details>
+
+  [📄 Paper](https://arxiv.org/pdf/2311.04400) | 💻 Code | [🌐 Project Page](https://yiconghong.me/LRM/)  
+
+
+### 15. [Arxiv '2024] GRM: Large Gaussian Reconstruction Model for Efficient 3D Reconstruction and Generation
+**Authors**: Yinghao Xu, Zifan Shi, Wang Yifan, Hansheng Chen, Ceyuan Yang, Sida Peng, Yujun Shen, Gordon Wetzstein
+<details span>
+<summary><b>Abstract</b></summary>
+  We introduce GRM, a large-scale reconstructor capable of recovering a 3D asset from sparse-view images in around 0.1s. GRM is a feed-forward transformer-based model that efficiently incorporates multi-view information to translate the input pixels into pixel-aligned Gaussians, which are unprojected to create a set of densely distributed 3D Gaussians representing a scene. Together, our transformer architecture and the use of 3D Gaussians unlock a scalable and efficient reconstruction framework. Extensive experimental results demonstrate the superiority of our method over alternatives regarding both reconstruction quality and efficiency. We also showcase the potential of GRM in generative tasks, i.e., text-to-3D and image-to-3D, by integrating it with existing multi-view diffusion models.
+</details>
+
+  [📄 Paper](https://arxiv.org/pdf/2403.14621) | [💻 Code](https://github.com/justimyhxu/grm) | [🌐 Project Page](https://justimyhxu.github.io/projects/grm/)  

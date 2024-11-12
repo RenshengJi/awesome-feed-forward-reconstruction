@@ -192,11 +192,44 @@ In this work, we present the Large Spatial Model (LSM), which processes unposed 
   [📄 Paper](https://arxiv.org/pdf/2411.04924) | [💻 Code](https://github.com/donydchen/mvsplat360) | [🌐 Project Page](https://donydchen.github.io/mvsplat360/) 
 
 
-### 20. [NIPS '2024] latentSplat: Autoencoding Variational Gaussians for Fast Generalizable 3D Reconstruction
+### 20. [ECCV '2024] latentSplat: Autoencoding Variational Gaussians for Fast Generalizable 3D Reconstruction
 **Authors**: Christopher Wewer, Kevin Raj, Eddy Ilg, Bernt Schiele, Jan Eric Lenssen
-<details span>
+<details span>ECCV
 <summary><b>Abstract</b></summary>
   We present latentSplat, a method to predict semantic Gaussians in a 3D latent space that can be splatted and decoded by a light-weight generative 2D architecture. Existing methods for generalizable 3D reconstruction either do not scale to large scenes and resolutions, or are limited to interpolation of close input views. latentSplat combines the strengths of regression-based and generative approaches while being trained purely on readily available real video data. The core of our method are variational 3D Gaussians, a representation that efficiently encodes varying uncertainty within a latent space consisting of 3D feature Gaussians. From these Gaussians, specific instances can be sampled and rendered via efficient splatting and a fast, generative decoder. We show that latentSplat outperforms previous works in reconstruction quality and generalization, while being fast and scalable to high-resolution data.
 </details>
 
   [📄 Paper](https://arxiv.org/pdf/2403.16292) | [💻 Code](https://github.com/Chrixtar/latentsplat) | [🌐 Project Page](https://geometric-rl.mpi-inf.mpg.de/latentsplat/) 
+
+
+
+### 21. [ICCV '2023] FineRecon: Depth-aware Feed-forward Network for Detailed 3D Reconstruction
+**Authors**: Noah Stier, Anurag Ranjan, Alex Colburn, Yajie Yan, Liang Yang, Fangchang Ma, Baptiste Angles
+<details span>
+<summary><b>Abstract</b></summary>
+  Recent works on 3D reconstruction from posed images have demonstrated that direct inference of scene-level 3D geometry without test-time optimization is feasible using deep neural networks, showing remarkable promise and high efficiency. However, the reconstructed geometry, typically represented as a 3D truncated signed distance function (TSDF), is often coarse without fine geometric details. To address this problem, we propose three effective solutions for improving the fidelity of inference-based 3D reconstructions. We first present a resolution-agnostic TSDF supervision strategy to provide the network with a more accurate learning signal during training, avoiding the pitfalls of TSDF interpolation seen in previous work. We then introduce a depth guidance strategy using multi-view depth estimates to enhance the scene representation and recover more accurate surfaces. Finally, we develop a novel architecture for the final layers of the network, conditioning the output TSDF prediction on high-resolution image features in addition to coarse voxel features, enabling sharper reconstruction of fine details. Our method, FineRecon, produces smooth and highly accurate reconstructions, showing significant improvements across multiple depth and 3D reconstruction metrics.
+</details>
+
+  [📄 Paper](https://arxiv.org/pdf/2304.01480) | [💻 Code](https://github.com/apple/ml-finerecon) | 🌐 Project Page
+
+
+
+### 22. [Arxiv '2024] Flex3D: Feed-Forward 3D Generation With Flexible Reconstruction Model And Input View Curation
+**Authors**: Junlin Han, Jianyuan Wang, Andrea Vedaldi, Philip Torr, Filippos Kokkinos
+<details span>
+<summary><b>Abstract</b></summary>
+  Generating high-quality 3D content from text, single images, or sparse view images remains a challenging task with broad applications. Existing methods typically employ multi-view diffusion models to synthesize multi-view images, followed by a feed-forward process for 3D reconstruction. However, these approaches are often constrained by a small and fixed number of input views, limiting their ability to capture diverse viewpoints and, even worse, leading to suboptimal generation results if the synthesized views are of poor quality. To address these limitations, we propose Flex3D, a novel two-stage framework capable of leveraging an arbitrary number of high-quality input views. The first stage consists of a candidate view generation and curation pipeline. We employ a fine-tuned multi-view image diffusion model and a video diffusion model to generate a pool of candidate views, enabling a rich representation of the target 3D object. Subsequently, a view selection pipeline filters these views based on quality and consistency, ensuring that only the high-quality and reliable views are used for reconstruction. In the second stage, the curated views are fed into a Flexible Reconstruction Model (FlexRM), built upon a transformer architecture that can effectively process an arbitrary number of inputs. FlemRM directly outputs 3D Gaussian points leveraging a tri-plane representation, enabling efficient and detailed 3D generation. Through extensive exploration of design and training strategies, we optimize FlexRM to achieve superior performance in both reconstruction and generation tasks. Our results demonstrate that Flex3D achieves state-of-the-art performance, with a user study winning rate of over 92% in 3D generation tasks when compared to several of the latest feed-forward 3D generative models.
+</details>
+
+  [📄 Paper](https://arxiv.org/pdf/2410.00890) | 💻 Code | [🌐 Project Page](https://junlinhan.github.io/projects/flex3d/) 
+
+
+
+### 23. [Arxiv '2024] Flash3D: Feed-Forward Generalisable 3D Scene Reconstruction from a Single Image
+**Authors**: Stanislaw Szymanowicz, Eldar Insafutdinov, Chuanxia Zheng, Dylan Campbell, João F. Henriques, Christian Rupprecht, Andrea Vedaldi
+<details span>
+<summary><b>Abstract</b></summary>
+  In this paper, we propose Flash3D, a method for scene reconstruction and novel view synthesis from a single image which is both very generalisable and efficient. For generalisability, we start from a "foundation" model for monocular depth estimation and extend it to a full 3D shape and appearance reconstructor. For efficiency, we base this extension on feed-forward Gaussian Splatting. Specifically, we predict a first layer of 3D Gaussians at the predicted depth, and then add additional layers of Gaussians that are offset in space, allowing the model to complete the reconstruction behind occlusions and truncations. Flash3D is very efficient, trainable on a single GPU in a day, and thus accessible to most researchers. It achieves state-of-the-art results when trained and tested on RealEstate10k. When transferred to unseen datasets like NYU it outperforms competitors by a large margin. More impressively, when transferred to KITTI, Flash3D achieves better PSNR than methods trained specifically on that dataset. In some instances, it even outperforms recent methods that use multiple views as input.
+</details>
+
+  [📄 Paper](https://arxiv.org/pdf/2406.04343) | [💻 Code](https://github.com/eldar/flash3d) | [🌐 Project Page](https://www.robots.ox.ac.uk/~vgg/research/flash3d/) 

@@ -244,3 +244,24 @@ In this work, we present the Large Spatial Model (LSM), which processes unposed 
 </details>
 
   [📄 Paper](https://arxiv.org/pdf/2410.22817) | 💻 Code | [🌐 Project Page](https://tatakai1.github.io/efreesplat/) 
+
+
+### 25. [Arxiv '2024] No Pose, No Problem: Surprisingly Simple 3D Gaussian Splats from Sparse Unposed Images
+**Authors**: Botao Ye, Sifei Liu, Haofei Xu, Xueting Li, Marc Pollefeys, Ming-Hsuan Yang, Songyou Peng
+<details span>
+<summary><b>Abstract</b></summary>
+  We introduce NoPoSplat, a feed-forward model capable of reconstructing 3D scenes parameterized by 3D Gaussians from \textit{unposed} sparse multi-view images. Our model, trained exclusively with photometric loss, achieves real-time 3D Gaussian reconstruction during inference. To eliminate the need for accurate pose input during reconstruction, we anchor one input view's local camera coordinates as the canonical space and train the network to predict Gaussian primitives for all views within this space. This approach obviates the need to transform Gaussian primitives from local coordinates into a global coordinate system, thus avoiding errors associated with per-frame Gaussians and pose estimation. To resolve scale ambiguity, we design and compare various intrinsic embedding methods, ultimately opting to convert camera intrinsics into a token embedding and concatenate it with image tokens as input to the model, enabling accurate scene scale prediction. We utilize the reconstructed 3D Gaussians for novel view synthesis and pose estimation tasks and propose a two-stage coarse-to-fine pipeline for accurate pose estimation. Experimental results demonstrate that our pose-free approach can achieve superior novel view synthesis quality compared to pose-required methods, particularly in scenarios with limited input image overlap. For pose estimation, our method, trained without ground truth depth or explicit matching loss, significantly outperforms the state-of-the-art methods with substantial improvements. This work makes significant advances in pose-free generalizable 3D reconstruction and demonstrates its applicability to real-world scenarios.
+</details>
+
+  [📄 Paper](https://arxiv.org/pdf/2410.24207) | [💻 Code](https://github.com/cvg/NoPoSplat) | [🌐 Project Page](https://noposplat.github.io/) 
+
+
+
+### 26. [CVPR'2024] MuRF: Multi-Baseline Radiance Fields
+**Authors**: Haofei Xu, Anpei Chen, Yuedong Chen, Christos Sakaridis, Yulun Zhang, Marc Pollefeys, Andreas Geiger, Fisher Yu
+<details span>
+<summary><b>Abstract</b></summary>
+  We present Multi-Baseline Radiance Fields (MuRF), a general feed-forward approach to solving sparse view synthesis under multiple different baseline settings (small and large baselines, and different number of input views). To render a target novel view, we discretize the 3D space into planes parallel to the target image plane, and accordingly construct a target view frustum volume. Such a target volume representation is spatially aligned with the target view, which effectively aggregates relevant information from the input views for high-quality rendering. It also facilitates subsequent radiance field regression with a convolutional network thanks to its axis-aligned nature. The 3D context modeled by the convolutional network enables our method to synthesis sharper scene structures than prior works. Our MuRF achieves state-of-the-art performance across multiple different baseline settings and diverse scenarios ranging from simple objects (DTU) to complex indoor and outdoor scenes (RealEstate10K and LLFF). We also show promising zero-shot generalization abilities on the Mip-NeRF 360 dataset, demonstrating the general applicability of MuRF.
+</details>
+
+  [📄 Paper](https://arxiv.org/pdf/2312.04565) | [💻 Code](https://github.com/autonomousvision/murf) | [🌐 Project Page](https://haofeixu.github.io/murf/) 

@@ -233,3 +233,14 @@ In this work, we present the Large Spatial Model (LSM), which processes unposed 
 </details>
 
   [📄 Paper](https://arxiv.org/pdf/2406.04343) | [💻 Code](https://github.com/eldar/flash3d) | [🌐 Project Page](https://www.robots.ox.ac.uk/~vgg/research/flash3d/) 
+
+
+
+### 24. [NIPS '2024] Epipolar-Free 3D Gaussian Splatting for Generalizable Novel View Synthesis
+**Authors**: Zhiyuan Min, Yawei Luo, Jianwen Sun, Yi Yang
+<details span>
+<summary><b>Abstract</b></summary>
+  Generalizable 3D Gaussian splitting (3DGS) can reconstruct new scenes from sparse-view observations in a feed-forward inference manner, eliminating the need for scene-specific retraining required in conventional 3DGS. However, existing methods rely heavily on epipolar priors, which can be unreliable in complex realworld scenes, particularly in non-overlapping and occluded regions. In this paper, we propose eFreeSplat, an efficient feed-forward 3DGS-based model for generalizable novel view synthesis that operates independently of epipolar line constraints. To enhance multiview feature extraction with 3D perception, we employ a selfsupervised Vision Transformer (ViT) with cross-view completion pre-training on large-scale datasets. Additionally, we introduce an Iterative Cross-view Gaussians Alignment method to ensure consistent depth scales across different views. Our eFreeSplat represents an innovative approach for generalizable novel view synthesis. Different from the existing pure geometry-free methods, eFreeSplat focuses more on achieving epipolar-free feature matching and encoding by providing 3D priors through cross-view pretraining. We evaluate eFreeSplat on wide-baseline novel view synthesis tasks using the RealEstate10K and ACID datasets. Extensive experiments demonstrate that eFreeSplat surpasses state-of-the-art baselines that rely on epipolar priors, achieving superior geometry reconstruction and novel view synthesis quality.
+</details>
+
+  [📄 Paper](https://arxiv.org/pdf/2410.22817) | 💻 Code | [🌐 Project Page](https://tatakai1.github.io/efreesplat/) 

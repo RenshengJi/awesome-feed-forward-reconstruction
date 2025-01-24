@@ -265,3 +265,22 @@ In this work, we present the Large Spatial Model (LSM), which processes unposed 
 </details>
 
   [📄 Paper](https://arxiv.org/pdf/2312.04565) | [💻 Code](https://github.com/autonomousvision/murf) | [🌐 Project Page](https://haofeixu.github.io/murf/) 
+
+
+### 27. [3DV'2025] 3D Reconstruction with Spatial Memory
+**Authors**: Hengyi Wang, Lourdes Agapito
+<details span>
+<summary><b>Abstract</b></summary>
+  We present Spann3R, a novel approach for dense 3D reconstruction from ordered or unordered image collections. Built on the DUSt3R paradigm, Spann3R uses a transformer-based architecture to directly regress pointmaps from images without any prior knowledge of the scene or camera parameters. Unlike DUSt3R, which predicts per image-pair pointmaps each expressed in its local coordinate frame, Spann3R can predict per-image pointmaps expressed in a global coordinate system, thus eliminating the need for optimization-based global alignment. The key idea of Spann3R is to manage an external spatial memory that learns to keep track of all previous relevant 3D information. Spann3R then queries this spatial memory to predict the 3D structure of the next frame in a global coordinate system. Taking advantage of DUSt3R's pre-trained weights, and further fine-tuning on a subset of datasets, Spann3R shows competitive performance and generalization ability on various unseen datasets and can process ordered image collections in real time.
+</details>
+
+  [📄 Paper](https://arxiv.org/pdf/2408.16061) | [💻 Code](https://github.com/HengyiWang/spann3r) | [🌐 Project Page](https://hengyiwang.github.io/projects/spanner) 
+
+### 26. [Arxiv'2025] Fast3R: Towards 3D Reconstruction of 1000+ Images in One Forward Pass
+**Authors**: Jianing Yang, Alexander Sax, Kevin J. Liang, Mikael Henaff, Hao Tang, Ang Cao, Joyce Chai, Franziska Meier, Matt Feiszli
+<details span>
+<summary><b>Abstract</b></summary>
+  Multi-view 3D reconstruction remains a core challenge in computer vision, particularly in applications requiring accurate and scalable representations across diverse perspectives. Current leading methods such as DUSt3R employ a fundamentally pairwise approach, processing images in pairs and necessitating costly global alignment procedures to reconstruct from multiple views. In this work, we propose Fast 3D Reconstruction (Fast3R), a novel multi-view generalization to DUSt3R that achieves efficient and scalable 3D reconstruction by processing many views in parallel. Fast3R's Transformer-based architecture forwards N images in a single forward pass, bypassing the need for iterative alignment. Through extensive experiments on camera pose estimation and 3D reconstruction, Fast3R demonstrates state-of-the-art performance, with significant improvements in inference speed and reduced error accumulation. These results establish Fast3R as a robust alternative for multi-view applications, offering enhanced scalability without compromising reconstruction accuracy.
+</details>
+
+  [📄 Paper](https://arxiv.org/pdf/2501.13928) | 💻 Code | [🌐 Project Page](https://fast3r-3d.github.io/) 
